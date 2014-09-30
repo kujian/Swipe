@@ -223,8 +223,9 @@ function Swipe(container, options) {
   }
 
   function stop() {
-
-    delay = 0;
+    //delay = 0;
+    //fix scroll forever
+    delay = options.auto > 0 ? options.auto : 0;
     clearTimeout(interval);
 
   }
